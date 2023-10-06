@@ -9,7 +9,7 @@ To use this project, follow these steps:
 1. Clone the repository:
 
    ```shell
-   git clone https://github.com/ImmuneFOMO/TelegramRedirectorSite.git
+   git@github.com:turman17/Website_Seredinska.git
    ```
 
 2. Navigate to the project directory:
