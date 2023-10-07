@@ -8,67 +8,116 @@ h6,
 p,
 form,
 ul,
+a,
 input {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 body {
   background-color: #f2f2f2;
   font-family: "Ubuntu", sans-serif;
+  max-width: 100vw;
 }
 
 .header {
-  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  padding: 20px 200px;
 }
 
-/* .headerLinksListWrapper {
+.headerTitle {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 1px;
+}
 
-} */
+.headerLinksWrapper {
+  display: flex;
+  margin-left: auto;
+}
 
-.headerLinksList {
-  
+.headerLink {
+  display: flex;
+  align-items: center;
+}
+
+.headerLink:first-of-type {
+  margin-right: 36px;
+}
+
+.headerLink > svg {
+  margin-right: 12px;
+}
+
+.headerLinkText {
+  font-size: 18px;
+  font-weight: 400;
+  color: #1e212c;
+  height: min-content;
+}
+
+.headerLinkText > b {
+  font-size: 14px;
+  color: #424551;
+}
+
+.firstPart {
+  position: relative;
+  margin: 0 33px 49px 33px;
 }
 
 .firstBackground {
-  width: 100vw;
+  width: 100%;
 }
 
-/* #userForm {
-  width: 400px;
-  margin: 50px auto;
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-} */
+.firstBlockText {
+  position: absolute;
+  /* top: 419px; */
+  top: 50%;
+  left: 329px;
+  color: #fff;
+  font-weight: 700;
+  transform: translateY(-50%);
+}
 
-/* label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-} */
+.firstBlockTitle {
+  font-size: 72px;
+  line-height: 130%;
+  letter-spacing: 1px;
+}
 
-/* input[type="text"],
-input[type="email"],
-input[type="tel"] {
-  width: 100%;
-  padding: 10px;
-  margin: 5px 0 20px;
-  border: 1px solid #ccc;
+.firstBlockSecondTitle {
+  /* display: inline-block; */
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 28px;
+}
+
+.firstBlocklink {
+  display: inline-block;
+  font-size: 16px;
+  padding: 18px 40px;
+  /* line-height: 52px; 325% */
+  letter-spacing: 0.5px;
   border-radius: 4px;
-} */
+  background: #ff5a30;
+}
 
-/* input[type="submit"] {
-    background-color: #007BFF;
-    color: white;
-    padding: 14px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  } */
+.secondPart {
+  position: relative;
+}
 
-/* input[type="submit"]:hover {
-    background-color: #0056b3;
-  } */
+.formWrapper {
+  position: absolute;
+  top: 0;
+  padding: 48px 66px 0 66px;
+}
