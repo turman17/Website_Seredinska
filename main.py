@@ -22,6 +22,18 @@ def submit_form():
     name = request.form['name']
     email = request.form['email']
     phone = request.form['phone']
+    social = request.form['social']
+    nationality = request.form['nationality']
+    family = request.form['family']
+    animal = request.form['animal']
+    date_move_in = request.form['date_move_in']
+    city = request.form['city']
+    rooms_number = request.form['rooms_number']
+    budget = request.form['budget']
+    meters = request.form['meters']
+    parking = request.form['parking']
+    work_info = request.form['work_info']
+    wishes = request.form['wishes']
     property = request.form['property']
 
     # Store in SQLite Database
@@ -30,8 +42,8 @@ def submit_form():
     db.session.commit()
 
     # Send to Telegram
-    telegram_bot_token = "your telegram bot token"
-    chat_id = "your chat id"
+    telegram_bot_token = "6420206412:AAHV11Zxtg5sNN0X-JBcqMjiL-Jjy15nZ-M"
+    chat_id = "543689883"
     text = f"New user\nName: {name}\nGmail: {email}\nPhone: {phone}\nInterested In: {property}"
 
     send_url = f"https://api.telegram.org/bot{telegram_bot_token}/sendMessage?chat_id={chat_id}&text={text}"

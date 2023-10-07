@@ -1,25 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
     <title>Realtor Form</title>
-  </head>
+</head>
 <body>
-  <form id="userForm" action="/submit" method="post">
-    <label for="name">Full Name:</label>
-    <input type="text" id="name" name="name">
+    <form id="userForm" action="/submit" method="post">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-    <label for="phone">Phone:</label>
-    <input type="tel" id="phone" name="phone">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
 
-    <label for="property">Interested In:</label>
-    <input type="text" id="property" name="property">
+        <label for="social">Social Media Profile:</label>
+        <input type="text" id="social" name="social">
+        
+        <label for="nationality">Nationality:</label>
+        <input type="text" id="nationality" name="nationality">
 
-    <input type="submit" value="Submit">
-  </form>
+        <label for="property">Interested In:</label>
+        <input type="text" id="property" name="property" required>
+
+        <label for="family">Family:</label>
+        <input type="text" id="family" name="family">
+        
+        <label for="animal">Animal:</label>
+        <input type="text" id="animal" name="animal">
+        
+        <label for="date_move_in">Date Move In:</label>
+        <input type="text" id="date_move_in" name="date_move_in">
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city">
+
+        <label for="rooms_number">Rooms Number:</label>
+        <input type="text" id="rooms_number" name="rooms_number">
+
+        <label for="budget">Budget:</label>
+        <input type="text" id="budget" name="budget">
+        
+        <label for="meters">Meters:</label>
+        <input type="text" id="meters" name="meters">
+
+        <label for="parking">Parking:</label>
+        <input type="text" id="parking" name="parking">
+
+        <label for="work_info">Work Info:</label>
+        <input type="text" id="work_info" name="work_info">
+
+        <label for="wishes">Wishes:</label>
+        <input type="text" id="wishes" name="wishes">
+
+        <label for="how_did_you_find_us">How Did You Find Us:</label>
+        <input type="text" id="how_did_you_find_us" name="how_did_you_find_us">
+
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
