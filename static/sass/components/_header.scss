@@ -1,24 +1,30 @@
 .header {
   display: flex;
   align-items: center;
-  padding: 15px 50px;
+  padding: 10px 20px;
+  // padding: 15px 50px;
+  // display: none;
+  
   @include mq(desktop) {
     padding: 20px 10%;
   }
 
   .headerTitle {
-    font-size: 50px;
+    // font-size: 50px;
+    font-size: 32px;
     font-weight: 700;
     line-height: 130%;
     letter-spacing: 1px;
     @include mq(desktop) {
-      font-size: 32px;
     }
   }
 
   .headerLinksWrapper {
     display: flex;
     margin-left: auto;
+    @include mq(mobile-only) {
+      display: none;
+    }
   }
 
   .headerLink {
