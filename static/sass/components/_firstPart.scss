@@ -1,9 +1,14 @@
 .firstPart {
   position: relative;
   display: flex;
-  // margin: 0 33px 49px 33px;
   // margin-bottom: 49px;
   height: min-content;
+  @include mq(tablet) {
+    margin: 0 28px 25px 28px;
+  }
+  // @include mq(desktop) {
+  //   padding: 20px 40px;
+  // }
 
   .firstBackground {
     width: 100%;
@@ -17,19 +22,24 @@
     font-weight: 700;
     transform: translateY(-50%);
 
-    @include mq(desktop) {
+    @include mq(tablet) {
       top: 50%;
-      left: 329px;
+      // left: 50%;
     }
+
+    // @include mq(desktop) {
+    //   top: 50%;
+    //   left: 329px;
+    // }
   }
 
   .firstBlockTitle {
-    font-size: 72px;
+    font-size: 40px;
     line-height: 130%;
     letter-spacing: 1px;
-    @include mq(mobile-only) {
+    @include mq(desktop) {
+      font-size: 72px;
       // display: none;
-      font-size: 40px;
     }
   }
 
@@ -45,14 +55,17 @@
 
   .firstBlocklink {
     display: inline-block;
-    font-size: 16px;
-    padding: 12px 30px;
+    font-size: 14px;
+    padding: 10px 20px;
+
     letter-spacing: 0.5px;
     border-radius: 4px;
     color: white;
     background: #ff5a30;
-  }
-  @include mq(desktop) {
-    padding: 20px 40px;
+    @include mq(tablet) {
+      font-size: 16px;
+      // padding: 12px 30px;
+      padding: 10px 30px;
+    }
   }
 }

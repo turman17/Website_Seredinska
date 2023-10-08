@@ -4,9 +4,9 @@
   padding: 10px 20px;
   // padding: 15px 50px;
   // display: none;
-  
-  @include mq(desktop) {
-    padding: 20px 10%;
+
+  @include mq(tablet) {
+    padding: 10px 30px;
   }
 
   .headerTitle {
@@ -15,8 +15,6 @@
     font-weight: 700;
     line-height: 130%;
     letter-spacing: 1px;
-    @include mq(desktop) {
-    }
   }
 
   .headerLinksWrapper {
@@ -37,6 +35,16 @@
     & > svg {
       margin-right: 12px;
     }
+
+    @include mq(tablet) {
+      &:first-of-type {
+        margin-right: 20px;
+      }
+      & > svg {
+        margin-right: 8px;
+        width: 30px;
+      }
+    }
   }
 
   .headerLinkText {
@@ -48,6 +56,12 @@
     & > b {
       font-size: 14px;
       color: #424551;
+    }
+    @include mq(tablet) {
+      font-size: 14px;
+      & > b {
+        font-size: 12px;
+      }
     }
   }
 }

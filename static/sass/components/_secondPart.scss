@@ -1,6 +1,9 @@
 .secondPart {
   position: relative;
-  // background-image: url('../secondBackground.jpg');
+  @include mq(tablet) {
+    background-image: url("../secondBackground.jpg");
+    padding: 10vh 0;
+  }
 }
 
 .secondBackground {
@@ -17,16 +20,20 @@
   // top: 0;
   // left: 50%;
   // transform: translateX(-50%);
-  // border-radius: 4px;
-  // border: 1px solid #e5e8ed;
   background-color: #fff;
-  // box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.05),
-  //   0px 12px 10px -6px rgba(30, 33, 44, 0.08),
-  //   0px 26px 24px -10px rgba(30, 33, 44, 0.1),
-  //   0px 60px 80px -20px rgba(30, 33, 44, 0.16);
   // padding: 48px 66px 37px 66px;
   padding: 30px 20px 25px 20px;
-  // max-width: 80vw;
+  @include mq(tablet) {
+    margin: auto;
+    max-width: 80vw;
+    // max-height: 70%;
+    box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.05),
+      0px 12px 10px -6px rgba(30, 33, 44, 0.08),
+      0px 26px 24px -10px rgba(30, 33, 44, 0.1),
+      0px 60px 80px -20px rgba(30, 33, 44, 0.16);
+    border-radius: 4px;
+    border: 1px solid #e5e8ed;
+  }
 
   .formTitle {
     color: #1e212c;
@@ -43,12 +50,16 @@
   #userForm {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    // margin: 0 auto;
     // margin: 0 20px 60px 20px;
     // margin-bottom: 60px;
     // max-width: 415px;
     margin-bottom: 30px;
     width: 100%;
+
+    @include mq(tablet) {
+      padding: 0 25px;
+    }
 
     .formLabel {
       color: #424551;
@@ -107,7 +118,11 @@
     margin-bottom: 30px;
     background: #ff5a30;
     color: #fff;
+    @include mq(desktop) {
+    padding: 15px 35px;
+    }
   }
+
 
   .formPolicyText {
     color: #424551;
