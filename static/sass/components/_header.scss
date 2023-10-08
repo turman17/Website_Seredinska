@@ -2,12 +2,18 @@
   display: flex;
   align-items: center;
   padding: 15px 50px;
+  @include mq(desktop) {
+    padding: 20px 10%;
+  }
 
   .headerTitle {
     font-size: 50px;
     font-weight: 700;
     line-height: 130%;
     letter-spacing: 1px;
+    @include mq(desktop) {
+      font-size: 32px;
+    }
   }
 
   .headerLinksWrapper {
@@ -39,7 +45,6 @@
     }
   }
 }
-
 
 // .header {
 //   display: flex;

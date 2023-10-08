@@ -8,11 +8,16 @@
 
   .firstBlockText {
     position: absolute;
-    top: 50%;
-    left: 329px;
+    top: 60%;
+    left: 15%;
     color: #fff;
     font-weight: 700;
     transform: translateY(-50%);
+
+    @include mq(desktop) {
+      top: 50%;
+      left: 329px;
+    }
   }
 
   .firstBlockTitle {

@@ -42,11 +42,21 @@ body {
   align-items: center;
   padding: 15px 50px;
 }
+@media (min-width: 1100px) {
+  .header {
+    padding: 20px 10%;
+  }
+}
 .header .headerTitle {
   font-size: 50px;
   font-weight: 700;
   line-height: 130%;
   letter-spacing: 1px;
+}
+@media (min-width: 1100px) {
+  .header .headerTitle {
+    font-size: 32px;
+  }
 }
 .header .headerLinksWrapper {
   display: flex;
@@ -83,11 +93,17 @@ body {
 }
 .firstPart .firstBlockText {
   position: absolute;
-  top: 50%;
-  left: 329px;
+  top: 60%;
+  left: 15%;
   color: #fff;
   font-weight: 700;
   transform: translateY(-50%);
+}
+@media (min-width: 1100px) {
+  .firstPart .firstBlockText {
+    top: 50%;
+    left: 329px;
+  }
 }
 .firstPart .firstBlockTitle {
   font-size: 72px;
