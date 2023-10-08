@@ -30,10 +30,23 @@
     }
 
     .linksList {
-      & > svg {
+      & > a {
         margin-right: 10px;
+        &:hover {
+          & > svg {
+            fill: #ff5a30;
+            opacity: 1;
+          }
+        }
         &:last-child {
           margin-right: 0;
+        }
+        & > svg {
+          fill: #fff;
+          opacity: 0.6;
+          width: 24px;
+          height: 24px;
+          transition: all 150ms linear; 
         }
       }
     }
@@ -51,6 +64,10 @@
       background: white;
       outline: 2px solid #ff5a30;
       fill: #ff5a30;
+    }
+    & > svg {
+      width: 24px;
+      height: 24px;
     }
   }
 }

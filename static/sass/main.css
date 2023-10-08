@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body,
 h1,
 h2,
@@ -416,11 +420,22 @@ body {
     font-size: 24px;
   }
 }
-.footer .footerLogoSvgs .linksList > svg {
+.footer .footerLogoSvgs .linksList > a {
   margin-right: 10px;
 }
-.footer .footerLogoSvgs .linksList > svg:last-child {
+.footer .footerLogoSvgs .linksList > a:hover > svg {
+  fill: #ff5a30;
+  opacity: 1;
+}
+.footer .footerLogoSvgs .linksList > a:last-child {
   margin-right: 0;
+}
+.footer .footerLogoSvgs .linksList > a > svg {
+  fill: #fff;
+  opacity: 0.6;
+  width: 24px;
+  height: 24px;
+  transition: all 150ms linear;
 }
 .footer .footerGoUp {
   display: flex;
@@ -435,4 +450,8 @@ body {
   background: white;
   outline: 2px solid #ff5a30;
   fill: #ff5a30;
+}
+.footer .footerGoUp > svg {
+  width: 24px;
+  height: 24px;
 }/*# sourceMappingURL=main.css.map */
