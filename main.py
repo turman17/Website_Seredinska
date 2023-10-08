@@ -15,9 +15,22 @@ class User(db.Model):
     name = db.Column(db.String(50), nullable=False)
     email = db.Column(db.String(50), nullable=False)
     phone = db.Column(db.String(50), nullable=False)
+    social = db.Column(db.String(50), nullable=False)
+    nationality = db.Column(db.String(50), nullable=False)
+    family = db.Column(db.String(50), nullable=False)
+    animal = db.Column(db.String(50), nullable=False)
+    date_move_in = db.Column(db.String(50), nullable=False)
+    city = db.Column(db.String(50), nullable=False)
+    rooms_number = db.Column(db.String(50), nullable=False)
+    budget = db.Column(db.String(50), nullable=False)
+    meters = db.Column(db.String(50), nullable=False)
+    parking = db.Column(db.String(50), nullable=False)
+    work_info = db.Column(db.String(50), nullable=False)
+    wishes = db.Column(db.String(50), nullable=False)
     property = db.Column(db.String(50), nullable=False)
 
 @app.route('/submit', methods=['POST'])
+
 def submit_form():
     name = request.form['name']
     email = request.form['email']
@@ -44,8 +57,25 @@ def submit_form():
     # Send to Telegram
     telegram_bot_token = "6420206412:AAHV11Zxtg5sNN0X-JBcqMjiL-Jjy15nZ-M"
     chat_id = "543689883"
-    text = f"New user\nName: {name}\nGmail: {email}\nPhone: {phone}\nInterested In: {property}"
-
+    text = (
+        f"New user\n"
+        f"Name: {name}\n"
+        f"Email: {email}\n"
+        f"Phone: {phone}\n"
+        f"Social networks: {social}\n"
+        f"Nationality: {nationality}\n"
+        f"Family: {family}\n"
+        f"Animal: {animal}\n"
+        f"Date move in: {date_move_in}\n"
+        f"City: {city}\n"
+        f"appartment: {rooms_number}\n"
+        f"Budget: {budget}\n"
+        f"Meters: {meters}\n"
+        f"Parking: {parking}\n"
+        f"Work info: {work_info}\n"
+        f"Wishes: {wishes}\n"
+        f"Property: {property}\n"
+    )
     send_url = f"https://api.telegram.org/bot{telegram_bot_token}/sendMessage?chat_id={chat_id}&text={text}"
     requests.get(send_url)
 
