@@ -146,7 +146,7 @@ body {
 }
 .firstPart .firstBlockText {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   color: #fff;
   font-weight: 700;
