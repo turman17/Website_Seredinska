@@ -3,10 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/index.css') }}"
-    /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -87,9 +83,9 @@
           <label class="formLabel" for="name">Імʼя та призвіще</label>
           <input id="name" class="formInput" type="text" />
           <label class="formLabel" for="email">Електронна пошта</label>
-          <input id="email" class="formInput" type="text" />
+          <input id="email" class="formInput" type="email" />
           <label class="formLabel" for="phone">Номер телефону </label>
-          <input id="phone" class="formInput" type="text" />
+          <input id="phone" class="formInput" type="tel" />
           <label class="formLabel" for="social_media"
             >Телеграм / Інстаграм</label
           >
@@ -105,7 +101,7 @@
           <label class="formLabel" for="settlement_date"
             >Бажана дата поселення</label
           >
-          <input id="settlement_date" class="formInput" type="text" />
+          <input id="settlement_date" class="formInput" type="date" />
           <p class="formLabel">Mісто</p>
           <div class="formRadioWrapper">
             <div class="formRadioInputLabelWrapper">

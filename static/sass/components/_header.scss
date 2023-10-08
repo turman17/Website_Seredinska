@@ -2,15 +2,16 @@
   display: flex;
   align-items: center;
   padding: 10px 20px;
-  // padding: 15px 50px;
-  // display: none;
 
   @include mq(tablet) {
     padding: 10px 30px;
   }
 
+  @include mq(desktop) {
+    padding: 25px 10%;
+  }
+
   .headerTitle {
-    // font-size: 50px;
     font-size: 32px;
     font-weight: 700;
     line-height: 130%;
@@ -20,6 +21,7 @@
   .headerLinksWrapper {
     display: flex;
     margin-left: auto;
+
     @include mq(mobile-only) {
       display: none;
     }
@@ -28,21 +30,22 @@
   .headerLink {
     display: flex;
     align-items: center;
-    &:first-of-type {
-      margin-right: 36px;
-    }
+    margin-right: 36px;
 
     & > svg {
       margin-right: 12px;
+      width: 30px;
+
+      @include mq(desktop) {
+        width: 40px;
+      }
     }
 
-    @include mq(tablet) {
-      &:first-of-type {
-        margin-right: 20px;
-      }
-      & > svg {
-        margin-right: 8px;
-        width: 30px;
+    &:first-of-type {
+      margin-right: 20px;
+
+      @include mq(desktop) {
+        margin-right: 36px;
       }
     }
   }
@@ -57,53 +60,21 @@
       font-size: 14px;
       color: #424551;
     }
+
     @include mq(tablet) {
       font-size: 14px;
+
       & > b {
         font-size: 12px;
       }
     }
+
+    @include mq(desktop) {
+      font-size: 18px;
+
+      & > b {
+        font-size: 14px;
+      }
+    }
   }
 }
-
-// .header {
-//   display: flex;
-//   align-items: center;
-//   padding: 20px 200px;
-
-//   .headerTitle {
-//     font-size: 32px;
-//     font-weight: 700;
-//     line-height: 130%;
-//     letter-spacing: 1px;
-//   }
-
-//   .headerLinksWrapper {
-//     display: flex;
-//     margin-left: auto;
-//   }
-
-//   .headerLink {
-//     display: flex;
-//     align-items: center;
-//     &:first-of-type {
-//       margin-right: 36px;
-//     }
-
-//     & > svg {
-//       margin-right: 12px;
-//     }
-//   }
-
-//   .headerLinkText {
-//     font-size: 18px;
-//     font-weight: 400;
-//     color: #1e212c;
-//     height: min-content;
-
-//     & > b {
-//       font-size: 14px;
-//       color: #424551;
-//     }
-//   }
-// }

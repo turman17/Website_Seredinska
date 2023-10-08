@@ -1,20 +1,32 @@
 .footer {
   display: flex;
   align-items: center;
-  // padding: 80px 345px;
   padding: 20px 25px;
   background: #1e212c;
   @include mq(tablet) {
     padding: 25px 30px;
   }
+  @include mq(desktop) {
+    padding: 40px 10vw;
+  }
 
   .footerLogoSvgs {
+    @include mq(desktop) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
     .footerLogo {
       color: #fff;
       font-size: 20px;
       font-weight: 700;
       letter-spacing: 1px;
       margin-bottom: 10px;
+      @include mq(desktop) {
+        margin-right: 65px;
+        margin-bottom: 0;
+        font-size: 24px;
+      }
     }
 
     .linksList {
