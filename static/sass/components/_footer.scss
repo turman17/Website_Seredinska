@@ -45,5 +45,12 @@
     background-color: #ff5a30;
     border-radius: 50%;
     padding: 10px;
+    transition: all 150ms linear;
+    fill: white;
+    &:hover {
+      background: white;
+      outline: 2px solid #ff5a30;
+      fill: #ff5a30;
+    }
   }
 }

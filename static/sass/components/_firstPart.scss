@@ -1,84 +1,88 @@
-.header {
+.firstPart {
+  position: relative;
   display: flex;
-  align-items: center;
-  padding: 10px 20px;
-
+  height: min-content;
   @include mq(tablet) {
-    padding: 10px 30px;
+    margin: 0 28px 25px 28px;
   }
   @include mq(desktop) {
-    padding: 25px 10%;
+    padding: 0 33px 49px 33px;
   }
 
-  .headerTitle {
-    font-size: 32px;
+  .firstBackground {
+    width: 100%;
+  }
+
+  .firstBlockText {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    color: #fff;
     font-weight: 700;
+    transform: translate(-50%, -50%);
+
+    @include mq(tablet) {
+      top: 55%;
+      left: 30%;
+    }
+
+    @include mq(desktop) {
+      left: 35%;
+    }
+  }
+
+  .firstBlockTitle {
+    font-size: 40px;
     line-height: 130%;
     letter-spacing: 1px;
-  }
-
-  .headerLinksWrapper {
-    display: flex;
-    margin-left: auto;
-    @include mq(mobile-only) {
-      display: none;
-    }
-  }
-
-  .headerLink {
-    display: flex;
-    align-items: center;
-    &:first-of-type {
-      margin-right: 36px;
-    }
-
-    & > svg {
-      margin-right: 12px;
-    }
-
+    text-align: center;
     @include mq(tablet) {
-      &:first-of-type {
-        margin-right: 20px;
-      }
-      & > svg {
-        margin-right: 8px;
-        width: 30px;
-      }
+      text-align: left;
     }
-
     @include mq(desktop) {
-      &:first-of-type {
-        margin-right: 36px;
-      }
-      & > svg {
-        margin-right: 12px;
-        width: 40px;
-      }
+      font-size: 72px;
     }
   }
 
-  .headerLinkText {
-    font-size: 18px;
+  .firstBlockSecondTitle {
+    font-size: 20px;
     font-weight: 400;
-    color: #1e212c;
-    height: min-content;
-
-    & > b {
-      font-size: 14px;
-      color: #424551;
-    }
+    line-height: 150%;
+    margin-bottom: 10px;
+    text-align: center;
     @include mq(tablet) {
-      font-size: 14px;
-      & > b {
-        font-size: 12px;
-      }
+      text-align: left;
     }
     @include mq(desktop) {
-      font-size: 18px;
+      margin-bottom: 22px;
+    }
+  }
 
-      & > b {
-        font-size: 14px;
-      }
+  .firstBlocklink {
+    display: block;
+    font-size: 14px;
+    padding: 10px 30px;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    color: white;
+    background: #ff5a30;
+    margin: 0 auto;
+    text-align: center;
+    width: fit-content;
+    transition: all 150ms linear;
+    @include mq(tablet) {
+      font-size: 16px;
+      margin: 0;
+      padding: 10px 25px;
+    }
+    @include mq(desktop) {
+      font-size: 16px;
+      padding: 12px 30px;
+    }
+    &:hover {
+      background: white;
+      color: #ff5a30;
+      outline: 2px solid #ff5a30;
     }
   }
 }

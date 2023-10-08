@@ -31,11 +31,17 @@
     display: flex;
     align-items: center;
     margin-right: 36px;
-
+    &:hover {
+      & > .headerLinkText {
+        color: #ff5a30;
+        & > b {
+          color: #ff5a30;
+        }
+      }
+    }
     & > svg {
       margin-right: 12px;
       width: 30px;
-
       @include mq(desktop) {
         width: 40px;
       }
@@ -43,37 +49,33 @@
 
     &:first-of-type {
       margin-right: 20px;
-
       @include mq(desktop) {
         margin-right: 36px;
       }
     }
-  }
 
-  .headerLinkText {
-    font-size: 18px;
-    font-weight: 400;
-    color: #1e212c;
-    height: min-content;
-
-    & > b {
-      font-size: 14px;
-      color: #424551;
-    }
-
-    @include mq(tablet) {
-      font-size: 14px;
-
-      & > b {
-        font-size: 12px;
-      }
-    }
-
-    @include mq(desktop) {
+    .headerLinkText {
       font-size: 18px;
-
+      font-weight: 400;
+      color: #1e212c;
+      height: min-content;
+      transition: all 150ms linear;
       & > b {
         font-size: 14px;
+        color: #424551;
+        transition: all 150ms linear;
+      }
+      @include mq(tablet) {
+        font-size: 14px;
+        & > b {
+          font-size: 12px;
+        }
+      }
+      @include mq(desktop) {
+        font-size: 18px;
+        & > b {
+          font-size: 14px;
+        }
       }
     }
   }
