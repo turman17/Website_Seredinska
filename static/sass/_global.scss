@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form,
+ul,
+a,
+input {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: "Ubuntu", sans-serif;
+  max-width: 100vw;
+}

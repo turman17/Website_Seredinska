@@ -1,0 +1,202 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form,
+ul,
+a,
+input {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: "Ubuntu", sans-serif;
+  max-width: 100vw;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 15px 50px;
+}
+.header .headerTitle {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 1px;
+}
+.header .headerLinksWrapper {
+  display: flex;
+  margin-left: auto;
+}
+.header .headerLink {
+  display: flex;
+  align-items: center;
+}
+.header .headerLink:first-of-type {
+  margin-right: 36px;
+}
+.header .headerLink > svg {
+  margin-right: 12px;
+}
+.header .headerLinkText {
+  font-size: 18px;
+  font-weight: 400;
+  color: #1e212c;
+  height: -moz-min-content;
+  height: min-content;
+}
+.header .headerLinkText > b {
+  font-size: 14px;
+  color: #424551;
+}
+
+.firstPart {
+  position: relative;
+  margin: 0 33px 49px 33px;
+}
+.firstPart .firstBackground {
+  width: 100%;
+}
+.firstPart .firstBlockText {
+  position: absolute;
+  top: 50%;
+  left: 329px;
+  color: #fff;
+  font-weight: 700;
+  transform: translateY(-50%);
+}
+.firstPart .firstBlockTitle {
+  font-size: 72px;
+  line-height: 130%;
+  letter-spacing: 1px;
+}
+.firstPart .firstBlockSecondTitle {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 28px;
+}
+.firstPart .firstBlocklink {
+  display: inline-block;
+  font-size: 16px;
+  padding: 18px 40px;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  color: white;
+  background: #ff5a30;
+}
+
+.secondPart {
+  position: relative;
+}
+
+.secondBackground {
+  width: 100%;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  border-radius: 4px;
+  border: 1px solid #e5e8ed;
+  background-color: #fff;
+  transform: translateX(-50%);
+  box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.05), 0px 12px 10px -6px rgba(30, 33, 44, 0.08), 0px 26px 24px -10px rgba(30, 33, 44, 0.1), 0px 60px 80px -20px rgba(30, 33, 44, 0.16);
+  padding: 48px 66px 37px 66px;
+}
+.formWrapper .formTitle {
+  color: #1e212c;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 150%;
+  margin-bottom: 51px;
+  width: -moz-max-content;
+  width: max-content;
+}
+.formWrapper #userForm {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  max-width: 415px;
+  width: 100%;
+}
+.formWrapper #userForm .formLabel {
+  color: #424551;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 7px;
+}
+.formWrapper #userForm .formInput {
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid #d7dadd;
+  background: #f4f5f6;
+  padding: 11px 16px;
+  width: 100%;
+}
+.formWrapper #userForm .formInput:last-of-type {
+  margin-bottom: 0;
+}
+.formWrapper #userForm .formRadioWrapper {
+  margin-bottom: 20px;
+}
+.formWrapper #userForm .formRadioInputLabelWrapper {
+  display: flex;
+  margin-bottom: 5px;
+}
+.formWrapper #userForm .formRadioLabel {
+  margin-bottom: 0;
+}
+.formWrapper #userForm .formRadioInput {
+  margin-right: 7px;
+}
+.formWrapper .submitBtn {
+  padding: 15px 32px;
+  border-radius: 4px;
+  border: 0;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 44px;
+  background: #ff5a30;
+  color: #fff;
+}
+.formWrapper .formPolicyText {
+  color: #424551;
+  font-size: 14px;
+}
+
+.footer {
+  display: flex;
+  padding: 80px 345px;
+  background: #1e212c;
+}/*# sourceMappingURL=main.css.map */
