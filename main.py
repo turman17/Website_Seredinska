@@ -27,30 +27,33 @@ class User(db.Model):
     parking = db.Column(db.String(50), nullable=False)
     work_info = db.Column(db.String(50), nullable=False)
     wishes = db.Column(db.String(50), nullable=False)
-    property = db.Column(db.String(50), nullable=False)
 
-@app.route('/submit', methods=['POST'])
+@app.route('/form-submitted', methods=['POST'])
 
 def submit_form():
     name = request.form['name']
     email = request.form['email']
     phone = request.form['phone']
-    social = request.form['social']
-    nationality = request.form['nationality']
+    social = request.form['social_media']
+    nationality = request.form['citizenship']
     family = request.form['family']
-    animal = request.form['animal']
-    date_move_in = request.form['date_move_in']
+    animal = request.form['animals']
+    date_move_in = request.form['settlement_date']
     city = request.form['city']
-    rooms_number = request.form['rooms_number']
-    budget = request.form['budget']
-    meters = request.form['meters']
-    parking = request.form['parking']
+    rooms_number = request.form['roomsAmount']
+    budget = request.form['price']
+    meters = request.form['apartment_area']
+    parking = request.form['Parking']
     work_info = request.form['work_info']
-    wishes = request.form['wishes']
-    property = request.form['property']
+    wishes = request.form['heardAboutUs']
 
-    # Store in SQLite Database
-    new_user = User(name=name, email=email, phone=phone, property=property)
+    new_user = User(
+        name=name, email=email, phone=phone, social=social, 
+        nationality=nationality, family=family, animal=animal, 
+        date_move_in=date_move_in, city=city, rooms_number=rooms_number, 
+        budget=budget, meters=meters, parking=parking, 
+        work_info=work_info, wishes=wishes
+    )
     db.session.add(new_user)
     db.session.commit()
 
@@ -74,12 +77,12 @@ def submit_form():
         f"Parking: {parking}\n"
         f"Work info: {work_info}\n"
         f"Wishes: {wishes}\n"
-        f"Property: {property}\n"
     )
     send_url = f"https://api.telegram.org/bot{telegram_bot_token}/sendMessage?chat_id={chat_id}&text={text}"
     requests.get(send_url)
 
-    return 'Form submitted'
+    return render_template('formSubmitted.html')
+    # return 'Form submitted'
 
 if __name__ == '__main__':
     with app.app_context():

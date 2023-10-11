@@ -71,9 +71,14 @@
       />
       <div id="formWrapper" class="formWrapper">
         <p class="formTitle">Анкета для підбору нерухомості в оренду</p>
-        <form id="userForm" action="/submit" method="post">
+        <form id="userForm" method="post" action="/form-submitted">
           <label class="formLabel" for="name">Імʼя та призвіще</label>
-          <input name="name" id="name" class="formInput" type="text" required />
+          <input 
+           name="name"  
+           id="name"  
+           class="formInput" 
+           type="text" 
+           required />
           <label class="formLabel" for="email">Електронна пошта</label>
           <input
             name="email"
