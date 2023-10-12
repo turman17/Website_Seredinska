@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
-from flask_sqlalchemy import SQLAlchemy
+from flask_sqlalchemy 
+import SQLAlchemy
 import requests
 
 app = Flask(__name__)
@@ -87,4 +88,4 @@ def submit_form():
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)
