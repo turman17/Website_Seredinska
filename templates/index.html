@@ -9,10 +9,9 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./static/sass/main.css" />
-    <title>Realtor Form</title>
+    <link rel="stylesheet" href="../static/sass/main.css" />
+    <title>Seredinska Realtor</title>
   </head>
-
   <body>
     <header class="header" id="header">
       <p class="headerTitle">SEREDINSKA</p>
@@ -51,272 +50,275 @@
         </a>
       </address>
     </header>
-    <div class="firstPart">
-      <img
-        class="firstBackground"
-        src="./static/firstBackground.jpg"
-        alt="First Background"
-      />
-      <div class="firstBlockText">
-        <h1 class="firstBlockTitle">SEREDINSKA</h1>
-        <h2 class="firstBlockSecondTitle">Real Estate agency</h2>
-        <a href="#formWrapper" class="firstBlocklink">НАДІСЛАТИ ЗАПИТ</a>
+    <main>
+      <div class="firstPart">
+        <img
+          class="firstBackground"
+          src="../static/firstBackground.jpg"
+          alt="First Background"
+        />
+        <div class="firstBlockText">
+          <h1 class="firstBlockTitle">SEREDINSKA</h1>
+          <h2 class="firstBlockSecondTitle">Real Estate agency</h2>
+          <a href="#formWrapper" class="firstBlocklink">НАДІСЛАТИ ЗАПИТ</a>
+        </div>
       </div>
-    </div>
-    <div class="secondPart">
-      <img
-        class="secondBackground"
-        src="./static/secondBackground.jpg"
-        alt="First Background"
-      />
-      <div id="formWrapper" class="formWrapper">
-        <p class="formTitle">Анкета для підбору нерухомості в оренду</p>
-        <form id="userForm" method="post" action="/form-submitted">
-          <label class="formLabel" for="name">Імʼя та призвіще</label>
-          <input 
-           name="name"  
-           id="name"  
-           class="formInput" 
-           type="text" 
-           required />
-          <label class="formLabel" for="email">Електронна пошта</label>
-          <input
-            name="email"
-            id="email"
-            class="formInput"
-            type="email"
-            required
-          />
-          <label class="formLabel" for="phone">Номер телефону </label>
-          <input
-            name="phone"
-            id="phone"
-            class="formInput"
-            type="tel"
-            required
-          />
-          <label class="formLabel" for="social_media"
-            >Телеграм / Інстаграм</label
-          >
-          <input
-            name="social_media"
-            id="social_media"
-            class="formInput"
-            type="text"
-            required
-          />
-          <label class="formLabel" for="citizenship">Громадянство</label>
-          <input
-            name="citizenship"
-            id="citizenship"
-            class="formInput"
-            type="text"
-            required
-          />
-          <label class="formLabel" for="family"
-            >Склад сімʼї (якщо є діти - вік)</label
-          >
-          <input
-            name="family"
-            id="family"
-            class="formInput"
-            type="text"
-            required
-          />
-          <label class="formLabel" for="animals">Тварини (вік та вага)</label>
-          <input
-            name="animals"
-            id="animals"
-            class="formInput"
-            type="text"
-            required
-          />
-          <label class="formLabel" for="settlement_date"
-            >Бажана дата поселення</label
-          >
-          <input
-            name="settlement_date"
-            id="settlement_date"
-            class="formInput"
-            type="date"
-            required
-          />
-          <p class="formLabel">Mісто</p>
-          <div class="formRadioWrapper">
-            <div class="formRadioInputLabelWrapper">
-              <input
-                class="formRadioInput"
-                type="radio"
-                id="Wroclaw"
-                name="city"
-                value="Вроцлав"
-                required
-              />
-              <label class="formRadioLabel formLabel" for="Wroclaw"
-                >Вроцлав</label
-              >
+      <div class="secondPart">
+        <img
+          class="secondBackground"
+          src="./static/secondBackground.jpg"
+          alt="First Background"
+        />
+        <div id="formWrapper" class="formWrapper">
+          <p class="formTitle">Анкета для підбору нерухомості в оренду</p>
+          <form id="userForm" method="post" action="/form-submitted">
+            <label class="formLabel" for="name">Імʼя та призвіще</label>
+            <input
+              name="name"
+              id="name"
+              class="formInput"
+              type="text"
+              required
+            />
+            <label class="formLabel" for="email">Електронна пошта</label>
+            <input
+              name="email"
+              id="email"
+              class="formInput"
+              type="email"
+              required
+            />
+            <label class="formLabel" for="phone">Номер телефону </label>
+            <input
+              name="phone"
+              id="phone"
+              class="formInput"
+              type="tel"
+              required
+            />
+            <label class="formLabel" for="social_media"
+              >Телеграм / Інстаграм</label
+            >
+            <input
+              name="social_media"
+              id="social_media"
+              class="formInput"
+              type="text"
+              required
+            />
+            <label class="formLabel" for="citizenship">Громадянство</label>
+            <input
+              name="citizenship"
+              id="citizenship"
+              class="formInput"
+              type="text"
+              required
+            />
+            <label class="formLabel" for="family"
+              >Склад сімʼї (якщо є діти - вік)</label
+            >
+            <input
+              name="family"
+              id="family"
+              class="formInput"
+              type="text"
+              required
+            />
+            <label class="formLabel" for="animals">Тварини (вік та вага)</label>
+            <input
+              name="animals"
+              id="animals"
+              class="formInput"
+              type="text"
+              required
+            />
+            <label class="formLabel" for="settlement_date"
+              >Бажана дата поселення</label
+            >
+            <input
+              name="settlement_date"
+              id="settlement_date"
+              class="formInput"
+              type="date"
+              required
+            />
+            <p class="formLabel">Mісто</p>
+            <div class="formRadioWrapper">
+              <div class="formRadioInputLabelWrapper">
+                <input
+                  class="formRadioInput"
+                  type="radio"
+                  id="Wroclaw"
+                  name="city"
+                  value="Вроцлав"
+                  required
+                />
+                <label class="formRadioLabel formLabel" for="Wroclaw"
+                  >Вроцлав</label
+                >
+              </div>
+              <div class="formRadioInputLabelWrapper">
+                <input
+                  class="formRadioInput"
+                  type="radio"
+                  id="Warsaw"
+                  name="city"
+                  value="Варшава"
+                  required
+                />
+                <label class="formRadioLabel formLabel" for="Warsaw"
+                  >Варшава</label
+                >
+              </div>
             </div>
-            <div class="formRadioInputLabelWrapper">
-              <input
-                class="formRadioInput"
-                type="radio"
-                id="Warsaw"
-                name="city"
-                value="Варшава"
-                required
-              />
-              <label class="formRadioLabel formLabel" for="Warsaw"
-                >Варшава</label
-              >
+            <p class="formLabel">Кількість кімнат</p>
+            <div class="formRadioWrapper">
+              <div class="formRadioInputLabelWrapper">
+                <input
+                  class="formRadioInput"
+                  type="radio"
+                  id="Кавалерка"
+                  name="roomsAmount"
+                  value="Кавалерка"
+                  required
+                />
+                <label class="formRadioLabel formLabel" for="Кавалерка"
+                  >Кавалерка</label
+                >
+              </div>
+              <div class="formRadioInputLabelWrapper">
+                <input
+                  class="formRadioInput"
+                  type="radio"
+                  id="Двокімнатна"
+                  name="roomsAmount"
+                  value="Двокімнатна"
+                  required
+                />
+                <label class="formRadioLabel formLabel" for="Двокімнатна"
+                  >Двокімнатна</label
+                >
+              </div>
+              <div class="formRadioInputLabelWrapper">
+                <input
+                  class="formRadioInput"
+                  type="radio"
+                  id="Трикімнатна"
+                  name="roomsAmount"
+                  value="Трикімнатна"
+                  required
+                />
+                <label class="formRadioLabel formLabel" for="Трикімнатна"
+                  >Трикімнатна</label
+                >
+              </div>
+              <div class="formRadioInputLabelWrapper">
+                <input
+                  class="formRadioInput"
+                  type="radio"
+                  id="Будинок"
+                  name="roomsAmount"
+                  value="Будинок"
+                  required
+                />
+                <label class="formRadioLabel formLabel" for="Будинок"
+                  >Будинок</label
+                >
+              </div>
+              <div class="formRadioInputLabelWrapper">
+                <input
+                  class="formRadioInput"
+                  type="radio"
+                  id="Кімната в квартирі або будинку"
+                  name="roomsAmount"
+                  value="Кімната в квартирі або будинку"
+                  required
+                />
+                <label
+                  class="formRadioLabel formLabel"
+                  for="Кімната в квартирі або будинку"
+                  >Кімната в квартирі або будинку</label
+                >
+              </div>
             </div>
-          </div>
-          <p class="formLabel">Кількість кімнат</p>
-          <div class="formRadioWrapper">
-            <div class="formRadioInputLabelWrapper">
-              <input
-                class="formRadioInput"
-                type="radio"
-                id="Кавалерка"
-                name="roomsAmount"
-                value="Кавалерка"
-                required
-              />
-              <label class="formRadioLabel formLabel" for="Кавалерка"
-                >Кавалерка</label
-              >
+            <label class="formLabel" for="price">Бюджет</label>
+            <input
+              name="price"
+              id="price"
+              class="formInput"
+              type="text"
+              required
+            />
+            <label class="formLabel" for="apartment_area">Метраж</label>
+            <input
+              name="apartment_area"
+              id="apartment_area"
+              class="formInput"
+              type="text"
+              required
+            />
+            <p class="formLabel">Паркінг</p>
+            <div class="formRadioWrapper">
+              <div class="formRadioInputLabelWrapper">
+                <input
+                  class="formRadioInput"
+                  type="radio"
+                  id="Yes"
+                  name="Parking"
+                  value="Так"
+                  required
+                />
+                <label class="formRadioLabel formLabel" for="Yes">Так</label>
+              </div>
+              <div class="formRadioInputLabelWrapper">
+                <input
+                  class="formRadioInput"
+                  type="radio"
+                  id="No"
+                  name="Parking"
+                  value="Ні"
+                  required
+                />
+                <label class="formRadioLabel formLabel" for="No">Ні</label>
+              </div>
             </div>
-            <div class="formRadioInputLabelWrapper">
-              <input
-                class="formRadioInput"
-                type="radio"
-                id="Двокімнатна"
-                name="roomsAmount"
-                value="Двокімнатна"
-                required
-              />
-              <label class="formRadioLabel formLabel" for="Двокімнатна"
-                >Двокімнатна</label
-              >
-            </div>
-            <div class="formRadioInputLabelWrapper">
-              <input
-                class="formRadioInput"
-                type="radio"
-                id="Трикімнатна"
-                name="roomsAmount"
-                value="Трикімнатна"
-                required
-              />
-              <label class="formRadioLabel formLabel" for="Трикімнатна"
-                >Трикімнатна</label
-              >
-            </div>
-            <div class="formRadioInputLabelWrapper">
-              <input
-                class="formRadioInput"
-                type="radio"
-                id="Будинок"
-                name="roomsAmount"
-                value="Будинок"
-                required
-              />
-              <label class="formRadioLabel formLabel" for="Будинок"
-                >Будинок</label
-              >
-            </div>
-            <div class="formRadioInputLabelWrapper">
-              <input
-                class="formRadioInput"
-                type="radio"
-                id="Кімната в квартирі або будинку"
-                name="roomsAmount"
-                value="Кімната в квартирі або будинку"
-                required
-              />
-              <label
-                class="formRadioLabel formLabel"
-                for="Кімната в квартирі або будинку"
-                >Кімната в квартирі або будинку</label
-              >
-            </div>
-          </div>
-          <label class="formLabel" for="price">Бюджет</label>
-          <input
-            name="price"
-            id="price"
-            class="formInput"
-            type="text"
-            required
-          />
-          <label class="formLabel" for="apartment_area">Метраж</label>
-          <input
-            name="apartment_area"
-            id="apartment_area"
-            class="formInput"
-            type="text"
-            required
-          />
-          <p class="formLabel">Паркінг</p>
-          <div class="formRadioWrapper">
-            <div class="formRadioInputLabelWrapper">
-              <input
-                class="formRadioInput"
-                type="radio"
-                id="Yes"
-                name="Parking"
-                value="Так"
-                required
-              />
-              <label class="formRadioLabel formLabel" for="Yes">Так</label>
-            </div>
-            <div class="formRadioInputLabelWrapper">
-              <input
-                class="formRadioInput"
-                type="radio"
-                id="No"
-                name="Parking"
-                value="Ні"
-                required
-              />
-              <label class="formRadioLabel formLabel" for="No">Ні</label>
-            </div>
-          </div>
-          <label class="formLabel" for="work_info">Дані про роботу</label>
-          <input
-            name="work_info"
-            id="work_info"
-            class="formInput"
-            type="text"
-            required
-          />
-          <label class="formLabel" for="wishes">Окремі побажання</label>
-          <input
-            name="wishes"
-            id="wishes"
-            class="formInput"
-            type="text"
-            required
-          />
-          <label class="formLabel" for="heardAboutUs"
-            >Звідки Ви про мене дізнались</label
-          >
-          <input
-            name="heardAboutUs"
-            id="heardAboutUs"
-            class="formInput"
-            type="text"
-            required
-          />
-        </form>
-        <button class="submitBtn" type="submit" form="userForm">
-          ВІДПРАВИТИ
-        </button>
-        <p class="formPolicyText">
-          Відправляючи анкету, ви даєте згоду на обробку персональних даних та
-          погоджуєтесь з політикою конфіденційності
-        </p>
+            <label class="formLabel" for="work_info">Дані про роботу</label>
+            <input
+              name="work_info"
+              id="work_info"
+              class="formInput"
+              type="text"
+              required
+            />
+            <label class="formLabel" for="wishes">Окремі побажання</label>
+            <input
+              name="wishes"
+              id="wishes"
+              class="formInput"
+              type="text"
+              required
+            />
+            <label class="formLabel" for="heardAboutUs"
+              >Звідки Ви про мене дізнались</label
+            >
+            <input
+              name="heardAboutUs"
+              id="heardAboutUs"
+              class="formInput"
+              type="text"
+              required
+            />
+          </form>
+          <button class="submitBtn" type="submit" form="userForm">
+            ВІДПРАВИТИ
+          </button>
+          <p class="formPolicyText">
+            Відправляючи анкету, ви даєте згоду на обробку персональних даних та
+            погоджуєтесь з політикою конфіденційності
+          </p>
+        </div>
       </div>
-    </div>
+    </main>
     <footer class="footer">
       <div class="footerLogoSvgs">
         <p class="footerLogo">SEREDINSKA</p>
