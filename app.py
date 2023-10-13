@@ -10,10 +10,6 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + basedir
 db = SQLAlchemy(app)
 
-@app.route('/')
-def index():
-    return render_template('index.html')
-
 class User(db.Model):
     __tablename__ = 'user'
     id = db.Column(db.Integer, primary_key=True)
@@ -33,8 +29,11 @@ class User(db.Model):
     work_info = db.Column(db.String(50), nullable=False)
     wishes = db.Column(db.String(50), nullable=False)
 
-@app.route('/form-submitted', methods=['POST'])
+@app.route('/')
+def index():
+    return render_template('index.html')
 
+@app.route('/form-submitted', methods=['POST'])
 def submit_form():
     name = request.form['name']
     email = request.form['email']
