@@ -5,9 +5,11 @@ from dotenv import  load_dotenv
 import requests
 
 load_dotenv()
+basedir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'users.db')
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + basedir
 db = SQLAlchemy(app)
+
 @app.route('/')
 def index():
     return render_template('index.html')
