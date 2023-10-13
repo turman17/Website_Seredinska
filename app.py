@@ -1,11 +1,14 @@
+import os
 from flask import Flask, request, render_template
 from flask_sqlalchemy import SQLAlchemy
+from dotenv import  load_dotenv, dotenv_values
 import requests
 
+# load_dotenv()
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 db = SQLAlchemy(app)
-
+print(os.getenv('chat_id'))
 @app.route('/')
 def index():
     return render_template('index.html')
