@@ -1,14 +1,13 @@
 import os
 from flask import Flask, request, render_template
 from flask_sqlalchemy import SQLAlchemy
-from dotenv import  load_dotenv, dotenv_values
+from dotenv import  load_dotenv
 import requests
 
-# load_dotenv()
+load_dotenv()
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 db = SQLAlchemy(app)
-print(os.getenv('chat_id'))
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -61,8 +60,8 @@ def submit_form():
     db.session.commit()
 
     # Send to Telegram
-    telegram_bot_token = "6420206412:AAHV11Zxtg5sNN0X-JBcqMjiL-Jjy15nZ-M"
-    chat_id = "543689883"
+    telegram_bot_token = os.getenv('telegram_bot_token')
+    chat_id = os.getenv('chat_id')
     text = (
         f"New user\n"
         f"Name: {name}\n"
@@ -85,7 +84,6 @@ def submit_form():
     requests.get(send_url)
 
     return render_template('formSubmitted.html')
-    # return 'Form submitted'
 
 if __name__ == '__main__':
     with app.app_context():
