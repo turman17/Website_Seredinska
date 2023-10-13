@@ -1,3 +1,7 @@
-http://154.56.63.44 {
-    reverse_proxy localhost:8000
+www.seredinska-rent.pl {
+    redir https://seredinska-rent.pl{uri}
+}
+
+seredinska-rent.pl {
+    reverse_proxy http://127.0.0.1:8000
 }
